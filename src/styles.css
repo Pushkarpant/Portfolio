@@ -55,9 +55,9 @@ a:focus-visible {
 }
 
 .app {
-  max-width: 1160px;
+  max-width: 1720px;
   margin: auto;
-  padding: 24px 28px 60px;
+  padding: 24px 4% 60px;
   overflow: hidden;
   position: relative;
 }
@@ -189,7 +189,7 @@ a:focus-visible {
    HERO
    ========================================================================== */
 .hero {
-  min-height: 660px;
+  min-height: calc(100vh - 120px);
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 42px;
@@ -1810,7 +1810,77 @@ footer button:hover {
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+/* ==========================================================================
+   RESPONSIVE: LARGE DESKTOPS & ULTRA-WIDE (≥ 1600px)
+   ========================================================================== */
+@media (min-width: 1600px) {
+  .hero-name {
+    font-size: clamp(100px, 9vw, 160px);
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 17px;
+    max-width: 700px;
+  }
+
+  .scene {
+    height: 600px;
+  }
+
+  .panel-head h2 {
+    font-size: clamp(70px, 6vw, 100px);
+  }
+
+  .statement {
+    font-size: 40px;
+  }
+
+  .project h3 {
+    font-size: 44px;
+  }
+
+  .contact-copy {
+    font-size: 30px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: STANDARD DESKTOP / SMALL LAPTOP (≤ 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .app {
+    padding: 24px 3% 60px;
+  }
+
+  .hero {
+    gap: 30px;
+  }
+
+  .scene {
+    height: 460px;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  .engineering-grid {
+    gap: 30px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: TABLET (≤ 900px)
+   ========================================================================== */
 @media (max-width: 900px) {
+  .app {
+    padding: 20px 5% 50px;
+  }
+
   .topbar {
     grid-template-columns: 1fr auto;
   }
@@ -1823,31 +1893,43 @@ footer button:hover {
     display: flex;
     grid-column: 1 / -1;
     justify-content: flex-start;
-    overflow: auto;
+    overflow-x: auto;
+    flex-wrap: nowrap;
   }
 
   .menu {
     display: grid !important;
   }
 
-  .hero,
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 30px;
+  }
+
+  .hero-name {
+    font-size: clamp(55px, 12vw, 100px);
+  }
+
+  .scene {
+    height: 400px;
+  }
+
   .about-grid,
   .engineering-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    min-height: 0;
-    padding-top: 45px;
-  }
-
-  .scene {
-    height: 420px;
-  }
-
   .panel-head {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .panel-head h2 {
+    font-size: clamp(46px, 9vw, 72px);
   }
 
   .experience {
@@ -1857,131 +1939,484 @@ footer button:hover {
   .experience .arrow {
     grid-column: 2;
   }
-}
 
-@media (max-width: 600px) {
-  .app {
-    padding: 16px 16px 40px;
+  .experience h3 {
+    font-size: 24px;
   }
 
-  .brand small {
-    display: none;
+  .project h3 {
+    font-size: 30px;
   }
 
-  .hero-name {
-    font-size: 68px;
-  }
-
-  .hero h2 {
+  .contact-copy {
     font-size: 22px;
-  }
-
-  .scene {
-    height: 360px;
-  }
-
-  .section-tabs {
-    overflow: auto;
-    flex-wrap: nowrap;
-  }
-
-  .section-tabs button {
-    white-space: nowrap;
-  }
-
-  .panel {
-    padding-bottom: 70px;
-  }
-
-  .panel-head h2 {
-    font-size: 54px;
-  }
-
-  .statement {
-    font-size: 28px;
   }
 
   .facts {
     border-left: 0;
     border-top: 1px solid var(--border-subtle);
     padding-left: 0;
-    padding-top: 8px;
+    padding-top: 12px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: PHONE LANDSCAPE / SMALL TABLET (≤ 600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .app {
+    padding: 14px 16px 40px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .brand b {
+    font-size: 11px;
+  }
+
+  .mark {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .top-actions .resume {
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+
+  .hero-name {
+    font-size: clamp(48px, 14vw, 80px);
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scene {
+    height: 320px;
+  }
+
+  .scene-label {
+    font-size: 8px;
+    padding: 5px 9px;
+  }
+
+  .scene-diag-banner {
+    font-size: 8px;
+    padding: 5px 12px;
+    gap: 6px;
+  }
+
+  .section-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 50px;
+  }
+
+  .section-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-tabs button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .panel {
+    padding-bottom: 60px;
+  }
+
+  .panel-head {
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+  }
+
+  .panel-head h2 {
+    font-size: clamp(40px, 11vw, 58px);
+  }
+
+  .panel-head p {
+    font-size: 12px;
+  }
+
+  .statement {
+    font-size: 24px;
+  }
+
+  .muted {
+    font-size: 13px;
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .experience .arrow {
+    display: none;
+  }
+
+  .period {
+    font-size: 8px;
+  }
+
+  .experience h3 {
+    font-size: 22px;
+  }
+
+  .exp-interactive-details {
+    padding: 12px 14px;
+  }
+
+  .exp-tabs {
+    gap: 5px;
+  }
+
+  .exp-tab-btn {
+    font-size: 9px;
+    padding: 5px 9px;
   }
 
   .project {
-    grid-template-columns: 35px 1fr;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .project-number {
+    display: none;
   }
 
   .project .arrow {
-    grid-column: 2;
+    display: none;
   }
 
   .project h3 {
-    font-size: 32px;
+    font-size: 26px;
+  }
+
+  .project p {
+    font-size: 12px;
+  }
+
+  .chips span {
+    font-size: 7px;
+    padding: 4px 8px;
+  }
+
+  .project-flow {
+    font-size: 8px;
+  }
+
+  .project-flow span {
+    padding: 6px 9px;
+  }
+
+  .project-sim-hint {
+    font-size: 9px;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .skill h3 {
+    font-size: 16px;
+  }
+
+  .skill p {
+    font-size: 12px;
+  }
+
+  .skill-code-drawer {
+    font-size: 10px;
+    padding: 10px 12px;
+  }
+
+  .principle h3 {
+    font-size: 14px;
+  }
+
+  .principle p {
+    font-size: 12px;
+  }
+
+  .architecture {
+    padding: 18px;
+  }
+
+  .flow-box {
+    font-size: 9px;
+    padding: 8px 10px;
   }
 
   .contact-grid {
-    gap: 30px;
+    gap: 28px;
+  }
+
+  .contact-copy {
+    font-size: 20px;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
+
+  .contact-form label {
+    font-size: 8px;
+    margin-bottom: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px 11px;
+    font-size: 14px;
   }
 
   footer {
     flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
 
   /* Modal responsive fixes */
-  .pipeline-stepper {
-    gap: 3px;
+  .modal-backdrop {
+    padding: 10px;
   }
 
-  .pipeline-step {
-    padding: 4px 8px;
-    font-size: 8px;
+  .modal-container {
+    max-height: 95vh;
+    border-radius: 10px;
   }
 
-  .step-circle {
-    width: 16px;
-    height: 16px;
-    font-size: 7px;
+  .modal-header {
+    padding: 14px 16px;
   }
 
-  .step-name {
-    display: none;
+  .modal-title-group h2 {
+    font-size: 20px;
+  }
+
+  .modal-tagline {
+    font-size: 11px;
+  }
+
+  .modal-close-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .modal-content {
+    padding: 12px 16px;
+  }
+
+  .modal-metrics-bar {
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .modal-metric-card .m-val {
+    font-size: 12px;
   }
 
   .modal-tabs {
     overflow-x: auto;
     flex-wrap: nowrap;
-    padding: 8px 16px;
+    padding: 8px 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .modal-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .modal-tab {
     white-space: nowrap;
     font-size: 10px;
     padding: 6px 10px;
+    flex-shrink: 0;
   }
 
-  .modal-header {
-    padding: 16px 18px;
+  .pipeline-stepper {
+    gap: 2px;
   }
 
-  .modal-content {
-    padding: 14px 18px;
+  .pipeline-step {
+    padding: 3px 6px;
+    font-size: 7px;
   }
 
-  .modal-metrics-bar {
-    padding: 10px 18px;
+  .step-circle {
+    width: 14px;
+    height: 14px;
+    font-size: 6px;
+  }
+
+  .step-name {
+    display: none;
   }
 
   .resume-sheet {
-    padding: 20px 18px;
+    padding: 18px 16px;
   }
 
   .resume-edu-item {
     flex-direction: column;
     gap: 2px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: SMALL PHONE (≤ 400px)
+   ========================================================================== */
+@media (max-width: 400px) {
+  .app {
+    padding: 12px 12px 32px;
+  }
+
+  .topbar {
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .mark {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .brand b {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .top-actions {
+    gap: 3px;
+  }
+
+  .top-actions .resume {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+  }
+
+  .hero-name {
+    font-size: clamp(40px, 15vw, 60px);
+    margin: 12px 0 18px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .scene {
+    height: 260px;
+  }
+
+  .scene-label {
+    font-size: 7px;
+    padding: 4px 7px;
+  }
+
+  .scene-diag-banner {
+    font-size: 7px;
+    padding: 4px 10px;
+  }
+
+  .section-tabs {
+    margin-bottom: 35px;
+    padding: 8px 0;
+  }
+
+  .section-tabs button {
+    font-size: 9px;
+    padding: 7px 10px;
+  }
+
+  .panel {
+    padding-bottom: 45px;
+  }
+
+  .panel-head h2 {
+    font-size: clamp(34px, 12vw, 48px);
+  }
+
+  .panel-head p {
+    font-size: 11px;
+  }
+
+  .statement {
+    font-size: 20px;
+  }
+
+  .fact span {
+    font-size: 8px;
+  }
+
+  .fact b {
+    font-size: 11px;
+  }
+
+  .experience h3 {
+    font-size: 20px;
+  }
+
+  .project h3 {
+    font-size: 22px;
+  }
+
+  .contact-copy {
+    font-size: 18px;
+  }
+
+  .modal-header {
+    padding: 12px 14px;
+  }
+
+  .modal-title-group h2 {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    padding: 10px 14px;
   }
 }
