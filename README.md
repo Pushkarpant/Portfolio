@@ -9,7 +9,7 @@
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
 [![Three.js](https://img.shields.io/badge/Three.js-r179-000000?style=flat-square&logo=threedotjs&logoColor=white)](https://threejs.org)
 [![GSAP](https://img.shields.io/badge/GSAP-3.13-88CE02?style=flat-square&logo=greensock&logoColor=white)](https://gsap.com)
-[![License](https://img.shields.io/badge/License-Private-713600?style=flat-square)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-713600?style=flat-square)](./LICENSE)
 
 <br/>
 
