@@ -12,7 +12,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-713600?style=flat-square)](./LICENSE)
 [![Deploy](https://img.shields.io/badge/Live-portfolio--pushkar-C05800?style=flat-square&logo=vercel&logoColor=white)](https://portfolio-pushkar-eef9.vercel.app)
 
-🔗 **Live:** [portfolio-pushkar-eef9.vercel.app](https://portfolio-five-inky-13.vercel.app/)
+🔗 **Live:** [portfolio-pushkar-eef9.vercel.app](https://portfolio-five-inky-13.vercel.app/)(https://portfolio-five-inky-13.vercel.app/)
 
 <br/>
 
