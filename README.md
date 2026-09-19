@@ -137,7 +137,6 @@ npm install
 # Start dev server (HMR enabled)
 npm run dev
 ```
-Opens at [http://localhost:5173](http://localhost:5173)
 
 ### Production Build
 ```bash
