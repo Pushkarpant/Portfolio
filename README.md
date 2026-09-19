@@ -10,6 +10,9 @@
 [![Three.js](https://img.shields.io/badge/Three.js-r179-000000?style=flat-square&logo=threedotjs&logoColor=white)](https://threejs.org)
 [![GSAP](https://img.shields.io/badge/GSAP-3.13-88CE02?style=flat-square&logo=greensock&logoColor=white)](https://gsap.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-713600?style=flat-square)](./LICENSE)
+[![Deploy](https://img.shields.io/badge/Live-portfolio--pushkar-C05800?style=flat-square&logo=vercel&logoColor=white)](https://portfolio-pushkar-eef9.vercel.app)
+
+🔗 **Live:** [portfolio-pushkar-eef9.vercel.app](https://portfolio-pushkar-eef9.vercel.app)
 
 <br/>
 
